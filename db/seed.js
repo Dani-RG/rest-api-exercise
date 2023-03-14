@@ -2,18 +2,20 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 
-// Import data to seed
+const Show = require('../models/Show');
+const MONGO_URL = 'mongodb://localhost:27017/tvshow-db';
+const shows = require('27017/showsData');
 
 mongoose
   .connect(process.env.MONGO_URL)
-  .then((x) => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
+  .then(response  => {
+    console.log(`Connected to Mongo! Database name: "${response.connections[0].name}"`);
   })
   .then(() => {
-    // Code to insert elements in DB
+    return Show.create(shows)
   })
-  .then((created) => {
-    // Confirmation
+  .then((createdShows) => {
+    console.log(`Inserted ${createdShows.length} shows in the database`)
   })
   .catch((err) => {
     console.error("Error connecting to mongo: ", err);

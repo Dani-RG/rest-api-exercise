@@ -5,8 +5,10 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+
 // Routers require
 const indexRouter = require('./routes/index');
+const showsRouter = require('./routes/shows');
 
 const app = express();
 
@@ -17,7 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // routes intro
-app.use('/', indexRouter);
+app.use('/', indexRouter)
+app.use('/', showsRouter);;
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
