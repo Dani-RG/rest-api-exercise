@@ -10,25 +10,25 @@ module.exports = [
   {
     title: "Vikings",
     creator: "Jeb Stuart",
-    launched: 2000,
+    launched: 2013,
     genre: "action",
-    image: "https://ychef.files.bbci.co.uk/976x549/p02fc1jw.jpg",
+    image: "https://www.cinematyrant.com/wp-content/uploads/2016/10/Vikings-on-netflix-707x1024.jpg",
     description: "Some vikings fighting."
   },
   {
     title: "Valhalla",
     creator: "Jeb Stuart",
-    launched: 2000,
+    launched: 2020,
     genre: "action",
-    image: "https://ychef.files.bbci.co.uk/976x549/p02fc1jw.jpg",
+    image: "https://img.etimg.com/thumb/msid-96970613,width-1200,height-900,imgsize-90580,overlay-economictimes/photo.jpg",
     description: "More vikings fighting."
   },
   {
     title: "The Last Kingdom",
     creator: "Stephen Butchard",
-    launched: 2000,
+    launched: 2015,
     genre: "action",
-    image: "https://ychef.files.bbci.co.uk/976x549/p02fc1jw.jpg",
-    description: "TSaxons fighting against vikings."
+    image: "https://cineverso.es/wp-content/uploads/2018/11/reththhh.png",
+    description: "Saxons fighting against vikings."
   },
 ]
