@@ -1,5 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const Show = require('../models/Show');
 
 // @desc    Get all shows
@@ -14,8 +13,8 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-// @desc    Get one course
-// @route   GET /courses/:courseId
+// @desc    Get one show
+// @route   GET /shows/:showId
 // @access  Public
 router.get('/:showId', async (req, res, next) => {
   const { showId } = req.params;
@@ -27,8 +26,8 @@ router.get('/:showId', async (req, res, next) => {
   }
 });
 
-// @desc    Create one course
-// @route   POST /courses
+// @desc    Create one show
+// @route   POST /shows
 // @access  Public
 router.post('/', async (req, res, next) => {
   try {
@@ -39,8 +38,8 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-// @desc    Edit one course
-// @route   PUT /courses/:courseId
+// @desc    Edit one show
+// @route   PUT /shows/:showId
 // @access  Public
 router.put('/:showId', async (req, res, next) => {
   const { showId } = req.params;
@@ -52,8 +51,8 @@ router.put('/:showId', async (req, res, next) => {
   }
 });
 
-// @desc    Delete one course
-// @route   DELETE /courses/:courseId
+// @desc    Delete one show
+// @route   DELETE /shows/:showId
 // @access  Public
 router.delete('/:showId', async (req, res, next) => {
   const { showId } = req.params;
