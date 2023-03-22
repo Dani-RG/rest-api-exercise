@@ -4,7 +4,9 @@ mongoose.set('strictQuery', true);
 
 const Show = require('../models/Show');
 const MONGO_URL = 'mongodb://localhost:27017/tvshow-db';
-const shows = require('27017/showsData');
+const shows = require('./showsData');
+
+console.log(shows)
 
 mongoose
   .connect(process.env.MONGO_URL)
